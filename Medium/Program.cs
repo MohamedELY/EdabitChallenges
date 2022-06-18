@@ -1,4 +1,7 @@
 ﻿using Medium;
 
 
-Console.WriteLine(Challenges.ReverseTheCase("HEjDå"));
+var t = Challenges.ReturnTheIndexOfAllCapitalLetters("HejSdksH");
+
+foreach (var item in t)
+    Console.WriteLine(item);

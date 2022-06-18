@@ -37,5 +37,22 @@ namespace Medium
 
             return new string(chars);
         }
+
+        /*
+        * Create a function that takes a single string as argument and 
+        * returns an ordered array containing the indices of all capital letters in the string.
+        * https://edabit.com/challenge/6qFnpAhd3kdmYcNG2
+        */
+        public static int[] ReturnTheIndexOfAllCapitalLetters(string word)
+        {
+            int index = 0;
+            int[] capitalLetterIndex = new int[word.Length];
+
+            for(int i = 0; i < word.Length; i++)
+                if (char.IsUpper(word[i]))
+                    capitalLetterIndex[index++] = i;
+
+            return capitalLetterIndex;
+        }
     }
 }
