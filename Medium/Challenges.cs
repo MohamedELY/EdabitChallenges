@@ -54,5 +54,29 @@ namespace Medium
 
             return capitalLetterIndex;
         }
+
+        /*
+        * Create a function which returns the number of true values there are in an array.
+        * Return 0 if given an empty array.
+        * All array items are of the type bool (true or false).
+        * https://edabit.com/challenge/GLbuMfTtDWwDv2F73
+        */
+        public static int CountTrue(params bool[] input)
+        {
+            int trueCounter = 0;
+            foreach (bool value in input)
+                if (value == true)
+                    trueCounter++;
+            
+            return trueCounter;
+        }
+
+        /*
+        * Create a function that finds the word "bomb" in the given string (not case sensitive). If
+        * found, return "Duck!!!", otherwise, return "There is no bomb, relax."
+        * https://edabit.com/challenge/JYEufqRvkusjr5R58
+        */
+        public static string Bomb(string input) => input.ToLower().Contains("bomb") ? "Duck!!!" : "There is no bomb, relax.";
+
     }
 }
