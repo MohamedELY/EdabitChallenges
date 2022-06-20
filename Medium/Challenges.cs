@@ -78,5 +78,54 @@ namespace Medium
         */
         public static string Bomb(string input) => input.ToLower().Contains("bomb") ? "Duck!!!" : "There is no bomb, relax.";
 
+        /*
+        * ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits. 
+        * Your task is to create a function that takes a string and returns true if the PIN is valid and false if it's not.
+        * https://edabit.com/challenge/gBYEFXeD9G2JMZ9dD
+        */
+        public static bool ValidatePIN(string pin)
+        {
+            if (!int.TryParse(pin, out _))
+                return false;
+            if (pin.Length != 4 && pin.Length != 6)
+                return false;
+
+            return true;
+        }
+
+        /*
+        *Create a function that takes any nonnegative number as an argument and return it with it's 
+        *digits in descending order. Descending order is when you sort from highest to lowest.
+        *https://edabit.com/challenge/N5G33s49LDXdhLdsT
+        */
+        public static int SortDescending(int inputNumber)
+        {
+            string numToString = inputNumber.ToString();
+            var numList = numToString.ToList();
+
+            bool unsorted = true;
+
+            while (unsorted)
+            {
+                unsorted = false;
+
+                for (int i = 1; i < numList.Count; i++)
+                {
+                    if(numList[i - 1] < numList[i])
+                    {
+                        var holder = numList[i];
+                        numList[i] = numList[i - 1];
+                        numList[i - 1] = holder;
+                        unsorted = true;
+                    }
+                }
+            }
+
+            string result = "";
+            foreach (var num in numList)
+                result += num;
+
+            return Convert.ToInt32(result);
+        }
     }
 }

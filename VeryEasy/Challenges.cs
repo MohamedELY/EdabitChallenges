@@ -38,7 +38,20 @@ namespace VeryEasy
         */
         public static int ConvertAgeToDays(int age) => age * 360;
 
+        /*
+        * Create a function that takes a name and returns a greeting in the form of a string.
+        * https://edabit.com/challenge/Xu35uEo7JdGP35AKF
+        */
+        public static string HelloName(string name) => $"Hello {name}!";
 
+         /*
+         * You are counting points for a basketball game, 
+         * given the amount of 3-pointers scored and 2-pointers scored, 
+         * find the final points for the team and return that value ([2 -pointers scored, 3-pointers scored]).
+         * https://edabit.com/challenge/mKLy6ZN4ZhHdWTeQm
+         */
+        public static int Points(int twoPointers, int treePointers) => (twoPointers * 2) + (treePointers * 3);
 
+      
     }
 }
