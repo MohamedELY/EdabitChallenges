@@ -16,5 +16,45 @@ namespace Hard
         * https://edabit.com/challenge/YGhgctqPsKQxQQCFS
         */
         public static string ReverseAndNot(int input) => String.Concat(input.ToString().Reverse()) + input.ToString();
+
+        /*
+        * Create a function that takes an array of numbers and return "Boom!" if the digit 7 appears in the array.
+        * Otherwise, return "there is no 7 in the array".
+        * https://edabit.com/challenge/6R6gReGTGwzpwuffD
+        */
+        public static string sevenBoom(int[] input)
+        {
+            foreach (int num in input)
+                if (num == 7)
+                    return "Boom!";
+            return "there is no 7 in the array";
+        }
+
+        /*
+        * Create a function that determines whether a number is Oddish or Evenish. 
+        * A number is Oddish if the sum of all of its digits is odd, and a number is Evenish if the sum of all of its digits is even. 
+        * If a number is Oddish, return "Oddish". Otherwise, return "Evenish".
+        * https://edabit.com/challenge/6R6gReGTGwzpwuffD
+        */
+        public static string oddishOrEvenish(int numbers)
+        {
+            string numbersString = numbers.ToString();
+            int total = 0;
+
+            foreach (char num in numbersString)
+            {
+                total += Convert.ToInt32(num);
+            }
+
+            if (total % 2 == 0)
+            {
+                return "Evenish";
+            }
+            else
+            {
+                return "Oddish";
+            }
+                
+        }
     }
 }
