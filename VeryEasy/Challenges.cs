@@ -36,7 +36,7 @@ namespace VeryEasy
         * Create a function that takes the age in years and returns the age in days.
         * https://edabit.com/challenge/nkkKguC5TgWnBiMLA
         */
-        public static int ConvertAgeToDays(int age) => age * 360;
+        public static int ConvertAgeToDays(int age) => age * 365;
 
         /*
         * Create a function that takes a name and returns a greeting in the form of a string.
@@ -50,7 +50,7 @@ namespace VeryEasy
          * find the final points for the team and return that value ([2 -pointers scored, 3-pointers scored]).
          * https://edabit.com/challenge/mKLy6ZN4ZhHdWTeQm
          */
-        public static int Points(int twoPointers, int treePointers) => (twoPointers * 2) + (treePointers * 3);
+        public static int Points(int twoPointers, int threePointers) => (twoPointers * 2) + (threePointers * 3);
 
       
     }
